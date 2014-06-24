@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>BAC UI</title>
+  
+  <script type='text/javascript' src='//code.jquery.com/jquery-1.10.1.js'></script>
+  
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+    
+      <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    
+  
+    
+      <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    
+  
+  <style type='text/css'>
+    
+  </style>
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$('#actionSubmit').on('click', function (e) {
+    e.preventDefault();
+    alert($('#testForm').serialize());
+});
+
+
+
+});//]]>  
+
+</script>
+
+
+</head>
+<body>
+<!-- <table class="table table-bordered table-striped">
+<thead><tr><th>Col 1</th><th>Col 2</th><th>Col 3</th></tr><th>Col 4</th><th>Col 5</th></tr></thead> -->
+
+<div class="col-sm-12">
+  <form id='testForm' action="/permute/" method="post">
+          {% csrf_token %}
+
+    <div class="col-sm-4">
+    {% for data in a %}
+ <li>
+ <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+            <input type="checkbox" name='cola' value='{{ data.dataa }}' />{{ data.dataa }}</label>
+        
+    </div> 
+</li> <br/>
+    {% endfor %}
+    </div>
+  <div class="col-sm-2">
+    {% for data in b %}
+ <li>
+ <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+            <input type="checkbox" name='colb' value='{{ data.datab }}' />{{ data.datab }}</label>
+        
+    </div> 
+</li> <br/>   
+    {% endfor %}
+</div>
+<div class="col-sm-2">
+    {% for data in c %}
+ <li>
+ <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+            <input type="checkbox" name='colc' value='{{ data.datac }}' />{{ data.datac }}</label>
+        
+    </div> 
+</li> <br/>   
+    {% endfor %}
+  </div>
+
+  <div class="col-sm-2">
+    {% for data in d %}
+ <li>
+ <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+            <input type="checkbox" name='cold' value='{{ data.datad }}' />{{ data.datad }}</label>
+        
+    </div> 
+</li> <br/>   
+    {% endfor %}
+  </div>
+
+  <div class="col-sm-2">
+    {% for data in e %}
+ <li>
+ <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+            <input type="checkbox" name='cole' value='{{ data.datae }}' />{{ data.datae }}</label>
+        
+    </div> 
+</li> <br/>   
+    {% endfor %}
+  </div>
+
+</div>
+<button class='btn' type="submit" id='1actionSubmit'>Submit</button>
+</form>
+</div>
+
+  
+</body>
+
+
+</html>
+
