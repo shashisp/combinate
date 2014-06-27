@@ -157,6 +157,7 @@ LOGGING = {
     }
 }
 STATIC_URL = '/static/'
+ADMIN_MEDIA_PREFIX = '/static/admin/' 
 
 
 import dj_database_url
