@@ -42,8 +42,7 @@ $('#actionSubmit').on('click', function (e) {
 
 </head>
 <body>
-<!-- <table class="table table-bordered table-striped">
-<thead><tr><th>Col 1</th><th>Col 2</th><th>Col 3</th></tr><th>Col 4</th><th>Col 5</th></tr></thead> -->
+
 
 <div class="col-sm-12">
   <form id='testForm' action="/permute/" method="post">
@@ -54,7 +53,7 @@ $('#actionSubmit').on('click', function (e) {
  <li>
  <div class="btn-group" data-toggle="buttons">
         <label class="btn btn-primary">
-            <input type="checkbox" name='cola' value='{{ data.dataa }}' />{{ data.dataa }}</label>
+            <input type="checkbox" name='cola' value='{{ data.dataa }}' />{{ data.name_a }}</label>
         
     </div> 
 </li> <br/>
@@ -65,7 +64,7 @@ $('#actionSubmit').on('click', function (e) {
  <li>
  <div class="btn-group" data-toggle="buttons">
         <label class="btn btn-primary">
-            <input type="checkbox" name='colb' value='{{ data.datab }}' />{{ data.datab }}</label>
+            <input type="checkbox" name='colb' value='{{ data.datab }}' />{{ data.name_b }}</label>
         
     </div> 
 </li> <br/>   
@@ -76,7 +75,7 @@ $('#actionSubmit').on('click', function (e) {
  <li>
  <div class="btn-group" data-toggle="buttons">
         <label class="btn btn-primary">
-            <input type="checkbox" name='colc' value='{{ data.datac }}' />{{ data.datac }}</label>
+            <input type="checkbox" name='colc' value='{{ data.datac }}' />{{ data.name_c }}</label>
         
     </div> 
 </li> <br/>   
@@ -88,7 +87,7 @@ $('#actionSubmit').on('click', function (e) {
  <li>
  <div class="btn-group" data-toggle="buttons">
         <label class="btn btn-primary">
-            <input type="checkbox" name='cold' value='{{ data.datad }}' />{{ data.datad }}</label>
+            <input type="checkbox" name='cold' value='{{ data.datad }}' />{{ data.name_d }}</label>
         
     </div> 
 </li> <br/>   
@@ -100,7 +99,7 @@ $('#actionSubmit').on('click', function (e) {
  <li>
  <div class="btn-group" data-toggle="buttons">
         <label class="btn btn-primary">
-            <input type="checkbox" name='cole' value='{{ data.datae }}' />{{ data.datae }}</label>
+            <input type="checkbox" name='cole' value='{{ data.datae }}' />{{ data.name_e }}</label>
         
     </div> 
 </li> <br/>   
@@ -110,7 +109,18 @@ $('#actionSubmit').on('click', function (e) {
 </div>
 <button class='btn' type="submit" id='1actionSubmit'>Submit</button>
 </form>
+
+<div>
+  {% for i in ad_id %}
+  <li>
+    <p>Adbatch # {{ i.adbatch_id }}</p>
+  </li>
+  {% endfor %}
 </div>
+</div>
+
+
+
 
   
 </body>

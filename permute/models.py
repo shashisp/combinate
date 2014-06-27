@@ -2,7 +2,7 @@ from django.db import models
 
 class CoulumA(models.Model):
 	dataa = models.CharField(max_length=100)
-    name_a = models.CharField(max_length=100)
+	name_a = models.CharField(max_length=100)
 
 	def __uniocode__(self):
 		return self.dataa
@@ -10,7 +10,8 @@ class CoulumA(models.Model):
 
 class CoulumB(models.Model):
 	datab = models.CharField(max_length=100)
-    name_b = models.CharField(max_length=100)
+	name_b = models.CharField(max_length=100)
+    #name_b = models.CharField(max_length=100)
 
 	def __unicode__(self):
 		return self.datab
@@ -18,7 +19,8 @@ class CoulumB(models.Model):
 
 class CoulumC(models.Model):
 	datac = models.CharField(max_length=100)
-    name_c = models.CharField(max_length=100)
+	name_c = models.CharField(max_length=100)
+    #name_c = models.CharField(max_length=100)
 
 	def __unicode__(self):
 		return self.datac
@@ -28,7 +30,8 @@ class CoulumC(models.Model):
 
 class CoulmD(models.Model):
 	datad = models.CharField(max_length=100)
-    name_d = models.CharField(max_length=100)
+	name_d = models.CharField(max_length=100)
+    #name_d = models.CharField(max_length=100)
 
 	def __unicode__(self):
 		return self.datad
@@ -36,14 +39,16 @@ class CoulmD(models.Model):
 
 class CoulumE(models.Model):
 	datae = models.CharField(max_length=100)
-    name_e = models.CharField(max_length=100)
+	name_e = models.CharField(max_length=100)
+    #name_e = models.CharField(max_length=100)
+
 
 	def __unicode__(self):
 		return self.datae
 
 
 class Adbatch(models.Model):
-	adbatch_id = models.AutoField(primary_key=True)
+	adbatch_id = models.IntegerField()
 	abbatch_cola = models.CharField(max_length=100)
 	abbatch_colb = models.CharField(max_length=100)
 	abbatch_colc = models.CharField(max_length=100)

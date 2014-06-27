@@ -8,6 +8,8 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^render/', 'permute.views.render'),
     url(r'^permute/', 'permute.views.que'),
+    url(r'^x/', 'permute.views.export'),
+    
     # url(r'^bauc/', include('bauc.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
