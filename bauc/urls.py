@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^render/', 'permute.views.render'),
     url(r'^permute/', 'permute.views.que'),
-    url(r'^x/', 'permute.views.export'),
+    url(r'^export/', 'permute.views.export'),
     
     # url(r'^bauc/', include('bauc.foo.urls')),
 

@@ -59,3 +59,4 @@ def export(request):
 			writer.writerow([adbatch.abbatch_cola, adbatch.abbatch_colb, adbatch.abbatch_colc, adbatch.abbatch_cold, adbatch.abbatch_cole])
 
 	return response
+	
