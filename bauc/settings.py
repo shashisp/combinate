@@ -156,6 +156,7 @@ LOGGING = {
         },
     }
 }
+STATIC_URL = '/static/'
 
 
 import dj_database_url
